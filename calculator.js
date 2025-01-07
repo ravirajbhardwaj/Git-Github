@@ -6,4 +6,9 @@ class Calculator {
     add() {
         console.log(`${this.numOne} + ${this.numTwo}`);
     }
+
+    subtract() {
+        console.log(`${this.numOne} - ${this.numTwo}`);
+    }
+
 }
