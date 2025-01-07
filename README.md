@@ -88,10 +88,11 @@ git pull origin <branch-name>
 ### Why Good Commit Messages Matter?
 
 - They provide a clear history of changes.
-- Help teammates understand the purpose of changes.
-- Facilitate debugging and collaboration.
 - Suggested Commit Message Guidelines:
-
+  ![Commit History](./commits.png "a title")
+- Help teammates understand the purpose of changes.
+  ![Commit History](./purpose.png "a title")
+- Facilitate debugging and collaboration.
 
 #### `Structure: <type>(<scope>): <description>`
 Types: Use clear prefixes such as:
