@@ -3,4 +3,7 @@ class Calculator {
         this.numOne = numOne;
         this.numTwo = numTwo;
     }
+    add() {
+        console.log(`${this.numOne} + ${this.numTwo}`);
+    }
 }
