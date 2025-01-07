@@ -15,5 +15,11 @@ class Calculator {
         console.log(`${this.numOne} * ${this.numTwo}`);
     }
 
-    
+    divide() {
+        if (this.numTwo !== 0) {
+            console.log(`${this.numOne} / ${this.numTwo}`);
+        } else {
+            console.log('Error: Division by zero');
+        }
+    }
 }
