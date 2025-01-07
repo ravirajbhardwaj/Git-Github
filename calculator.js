@@ -11,4 +11,9 @@ class Calculator {
         console.log(`${this.numOne} - ${this.numTwo}`);
     }
 
+    multiply() {
+        console.log(`${this.numOne} * ${this.numTwo}`);
+    }
+
+    
 }
