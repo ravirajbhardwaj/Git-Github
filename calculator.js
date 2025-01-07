@@ -1,3 +1,8 @@
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
 class Calculator {
     constructor(numOne, numTwo) {
         this.numOne = numOne;
@@ -23,3 +28,29 @@ class Calculator {
         }
     }
 }
+
+readline.question('Enter first number: ', numOne => {
+    readline.question('Enter second number: ', numTwo => {
+        const calculator = new Calculator(parseFloat(numOne), parseFloat(numTwo));
+        
+        readline.question('Choose operation ( + - * /): ', operation => {
+            switch (operation) {
+                case '+':
+                    calculator.add();
+                    break;
+                case '-':
+                    calculator.subtract();
+                    break;
+                case '*':
+                    calculator.multiply();
+                    break;
+                case '/':
+                    calculator.divide();
+                    break;
+                default:
+                    console.log('Invalid operation');
+            }
+            readline.close();
+        });
+    });
+    });
