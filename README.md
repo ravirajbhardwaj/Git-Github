@@ -125,20 +125,23 @@ cd Git-Github
   ![Commit History](./purpose.png "a title")
 - Facilitate debugging and collaboration.
 
-#### `Structure: <type>(<scope>): <description>`
-Types: Use clear prefixes such as:
-- `feat`: A new feature.
-- `fix`: A bug fix.
-- `docs`: Documentation changes.
-- `style`: Code style or formatting changes.
-- `refactor`: Code refactoring without changing functionality.
+### Essential Git Commit Rules at ChaiCode Cohort
 
-Examples:
-```
-feat(auth): add user login functionality
+| **Rule**                           | **Description**                                                                                   |
+|------------------------------------|---------------------------------------------------------------------------------------------------|
+| **Structure**                      | Follow the format: `<type>(<scope>): <description>`                                               |
+| **Types**                          | Use clear prefixes to describe the purpose of the commit:                                         |
+| - `feat`                           | A new feature.                                                                                    |
+| - `fix`                            | A bug fix.                                                                                        |
+| - `docs`                           | Documentation changes.                                                                            |
+| - `style`                          | Code style or formatting changes (no functional changes).                                         |
+| - `refactor`                       | Code refactoring without changing functionality.                                                  |
+| **Examples**                       | `feat(auth): add user login functionality`                                                        |
+|                                    | `fix(api): resolve timeout issue in fetch requests`                                               |
+| **Limit Subject to 50 Characters** | Keep the subject concise and to the point.                                                       |
+| **Use Present Tense**              | Write messages in the present tense, e.g., "Add feature" instead of "Added feature."             |
+| **Describe What and Why**          | Explain *what* changes were made and *why* they were necessary.                                   |
 
-fix(api): resolve timeout issue in fetch requests
-```
 
 --- 
 
