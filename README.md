@@ -23,7 +23,7 @@ It ensures every change is documented and reversible, making it indispensable fo
 
 ### 🌐 What is `GitHub`?
 
-GitHub is a **cloud-based platform** built on Git, designed to enhance team collaboration. It provides:
+GitHub is a **cloud-based platform** where you can store, share, and work together with others to write code:
 - Centralized code repositories.
 - Tools for code review, issue tracking, and continuous integration.
 
@@ -36,21 +36,41 @@ GitHub is a **cloud-based platform** built on Git, designed to enhance team coll
 3. Follow the installation instructions.
 
 ### Step 2: Configure Git
-Run these commands in your terminal to set up Git:
+After installation, configure your name and email (must match your Chai Cohort email):
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
+To verify your configuration:
+```bash
+git config --list
+```
+
 ### Step 3: Set Up GitHub
 
 Create an account on [GitHub](https://github.com).
 
-Instagram or FB account bna sakta ho to Github kyu nhi?
+### SSH Key Setup (For Secure Access)
+Generate an SSH key (if not already done):
+       Follow prompts and save the key.
+```bash
+ssh-keygen -t rsa -b 4096 -C "your.email.com"
+```
 
+Copy the public key to GitHub:
+      Go to GitHub Settings > SSH and GPG Keys > Add SSH Key and paste it.
+```bash
+cat ~/.ssh/id_rsa.pub
+```
+Authenticate GitHub via SSH
+Test the SSH connection:
+```bash
+ssh -T git@github.com
+```
 ---
 
 ## 3️⃣ Cloning the Repository
-Run the following command to clone the repository:
+Copy the SSH/HTTPS URL and run:
 
 ```bash
 git clone git@github.com:ravirajbhardwaj/Git-Github.git
@@ -60,27 +80,38 @@ cd Git-Github
 ---
 ## 4️⃣ Basic Git Commands
 
-Check Repository Status:
-```bash
-git status
-```
-Add Changes to Staging Area:
-```bash
-git add <file-name> ## add what file and folder u want
-git add .       ## add all files and folder
-```
-Commit Changes:
-```bash
-git commit -m "Your commit message"
-```
-Push Changes to Remote Repository:
-```bash
-git push origin <branch-name>
-```
-Pull Latest Changes:
-```bash
-git pull origin <branch-name>
-```
+### Git Commands for GitHub
+
+| **Command**                           | **Usage**                                                                 |
+|---------------------------------------|---------------------------------------------------------------------------|
+| `git init`                            | Initializes a new Git repository in your project folder.                 |
+| `git clone <repository-url>`          | Clones an existing repository from GitHub to your local machine.         |
+| `git status`                          | Displays the status of changes in your local repository.                 |
+| `git add <file>`                      | Stages specific files for commit.                                        |
+| `git add .`                           | Stages all changes in the current directory for commit.                  |
+| `git commit -m "message"`             | Saves staged changes with a commit message.                              |
+| `git branch`                          | Lists all branches in the repository.                                    |
+| `git branch <branch-name>`            | Creates a new branch with the specified name.                            |
+| `git checkout <branch-name>`          | Switches to the specified branch.                                        |
+| `git merge <branch-name>`             | Merges the specified branch into the current branch.                     |
+| `git pull`                            | Fetches and merges changes from the remote repository into your branch.  |
+| `git push`                            | Pushes your commits to the remote repository.                            |
+| `git remote add origin <url>`         | Links your local repository to a remote repository on GitHub.            |
+| `git fetch`                           | Downloads changes from the remote repository without merging them.       |
+| `git log`                             | Shows a log of commits in the repository.                                |
+| `git diff`                            | Displays changes not yet staged or committed.                            |
+| `git reset <file>`                    | Unstages a file that was staged with `git add`.                          |
+| `git rm <file>`                       | Removes a file from the working directory and the staging area.          |
+| `git push -u origin <branch-name>`    | Pushes the branch and sets it to track the remote branch.                |
+| `git stash`                           | Temporarily stores changes not ready to be committed.                    |
+| `git stash apply`                     | Reapplies the stored changes from the stash.                             |
+| `git tag <tag-name>`                  | Creates a tag for the current commit (useful for versioning).            |
+| `git show <tag-name>`                 | Displays information about a specific tag.                               |
+| `git rebase <branch-name>`            | Moves or applies commits from one branch onto another.                   |
+| `git cherry-pick <commit-hash>`       | Applies a specific commit from one branch to another.                    |
+| `git revert <commit-hash>`            | Creates a new commit to undo the changes from a specific commit.         |
+
+
 ---
 
 ## 5️⃣ Commit Message Rules
